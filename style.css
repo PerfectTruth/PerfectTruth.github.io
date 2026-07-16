@@ -1,0 +1,48 @@
+@import url('common.css');
+
+/* 멤버 페이지 레이아웃: 모든 수치를 rem(10px 기준)으로 변환 */
+.member-page-wrapper { max-width: 56.25rem; margin: 0 auto; padding-top: 3.125rem; }
+.member-container { display: flex; justify-content: center; gap: 1.875rem; align-items: flex-start; }
+
+.table-area { width: 25.0rem; }
+.member-title { margin: 0 0 1.25rem 0; padding-bottom: 0.625rem; border-bottom: 0.125rem solid var(--primary-color); text-align: center; }
+
+.info-table { width: 100%; border-collapse: collapse; background-color: var(--bg-card); border: 0.0625rem solid var(--border-color); }
+.info-table th, .info-table td { padding: 0.75rem; border: 0.0625rem solid var(--border-color); text-align: center; }
+.info-table th { background-color: #2a2a35; width: 35%; }
+
+.image-area img {
+    width: 25.0rem; 
+    border-radius: 0.625rem;
+    margin-right: 1.875rem; 
+}
+
+/* 영상 레이아웃 (style.css에서 관리) */
+/* 
+.video-container {
+    margin: 3.0rem auto;
+    text-align: center;
+}
+.video-container iframe {
+    height: 70.0rem;      /* 세로 700px 고정 */
+    width: auto;          /* 가로 비율 유지 */
+    max-width: 100%;      /* 반응형 대응 */
+    display: inline-block;
+} */
+
+.video-container {
+  position: relative;
+  margin: 3rem auto;
+  width: 80%;
+  max-width: 50rem;
+  height: 0;                /* 핵심: 높이를 직접 없앰 */
+  padding-bottom: 56.25%;   /* 16:9 비율 확보 */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
